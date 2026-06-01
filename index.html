@@ -4,18 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DNA Cincin - Masterpiece B2B System</title>
-</head>
-<body class="min-h-screen bg-[#0c0d10] text-[#e5e7eb]" style="background-color: #0c0d10; color: #e5e7eb; font-family: sans-serif; margin: 0;">
-
-    <!-- ENGINE DESAIN KEBAL PREVIEW -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
         
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background-color: #0c0d10; color: #e5e7eb; scroll-behavior: smooth; }
         h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; }
-
         .gold-gradient { background: linear-gradient(135deg, #d4af37, #fcf6ba, #b38728, #fbf5b7, #aa771c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .gold-bg { background: linear-gradient(135deg, #d4af37, #aa771c); transition: all 0.3s ease; }
         .gold-bg:hover { background: linear-gradient(135deg, #fcf6ba, #d4af37); box-shadow: 0 0 20px rgba(212, 175, 55, 0.4); }
@@ -35,6 +30,8 @@
             -webkit-box-shadow: 0 0 0 30px black inset !important; -webkit-text-fill-color: white !important; transition: background-color 5000s ease-in-out 0s;
         }
     </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-start p-4 md:p-6 lg:p-8">
 
     <!-- ================= LAYAR LOGIN (PORTAL AKSES) ================= -->
     <div id="loginContainer" class="fixed inset-0 z-50 flex flex-col items-center justify-center p-4 bg-[#0c0d10]" style="display: flex;">
@@ -76,7 +73,6 @@
     <!-- ================= APLIKASI UTAMA (DNA CINCIN) ================= -->
     <div id="appContainer" class="w-full flex-col items-center p-4 md:p-6 lg:p-8" style="display: none;">
         
-        <!-- Header & Logout -->
         <div class="w-full max-w-7xl flex justify-end mb-2">
             <button id="logoutBtn" class="flex items-center gap-2 text-xs font-semibold text-red-400 hover:text-red-300 bg-red-950/30 hover:bg-red-900/40 border border-red-900/50 px-4 py-2 rounded-full transition-all">
                 <i data-lucide="log-out" class="w-3.5 h-3.5"></i> Keluar Akses
@@ -90,7 +86,7 @@
             </div>
             <h1 class="text-4xl md:text-6xl font-bold mb-4 gold-gradient tracking-widest uppercase font-serif" style="color: #d4af37;">DNA Cincin</h1>
             <p class="text-gray-400 max-w-2xl mx-auto text-sm md:text-base leading-relaxed text-justify-custom md:text-center font-light">
-                Sistem manufaktur perhiasan B2B terpadu. Terproteksi secara absolut dari halusinasi AI. Menjamin 100% kepatuhan pada konfigurasi batu permata/logam solid, warna material, dan proporsi gender.
+                Sistem manufaktur perhiasan B2B terpadu. Terproteksi secara absolut dari halusinasi AI. Menjamin simetri sempurna pada Dome (V3) dan kontras tajam antar gaya arsitektur V1 (Smooth) dan V2 (Angular).
             </p>
         </header>
 
@@ -125,7 +121,7 @@
                         <h3 id="labelSektorUtama" class="text-sm font-bold text-yellow-600 mb-3 tracking-widest uppercase font-serif" style="color: #d4af37;">Data Pemesan Utama</h3>
                         <div class="space-y-4">
                             <div id="genderContainer">
-                                <label class="block text-xs font-medium text-gray-400 mb-1.5">Gender Anatomi</label>
+                                <label class="block text-xs font-medium text-gray-400 mb-1.5">Gender Anatomi (Pengatur Siluet)</label>
                                 <div class="grid grid-cols-2 gap-3">
                                     <div>
                                         <input type="radio" name="gender" id="pria" value="pria" class="hidden" checked style="display:none;">
@@ -144,12 +140,12 @@
 
                             <div>
                                 <label id="labelTglUtama" class="block text-xs font-medium text-gray-400 mb-1.5">Tanggal Lahir</label>
-                                <input type="date" id="tanggalLahir" required class="w-full bg-black border border-gray-700 rounded-xl px-4 py-3 text-gray-200 focus:outline-none focus:border-yellow-600 transition text-sm">
+                                <input type="date" id="tanggalLahir" required class="w-full bg-black border border-gray-700 rounded-xl px-4 py-3 text-gray-200 focus:outline-none focus:border-yellow-600 focus:ring-1 focus:ring-yellow-600 transition text-sm">
                             </div>
 
                             <div>
                                 <label id="labelDarahUtama" class="block text-xs font-medium text-gray-400 mb-1.5">Golongan Darah</label>
-                                <select id="darah" required class="w-full bg-black border border-gray-700 rounded-xl px-4 py-3 text-gray-200 focus:outline-none focus:border-yellow-600 transition text-sm" style="-webkit-appearance: auto;">
+                                <select id="darah" required class="w-full bg-black border border-gray-700 rounded-xl px-4 py-3 text-gray-200 focus:outline-none focus:border-yellow-600 focus:ring-1 focus:ring-yellow-600 transition text-sm" style="-webkit-appearance: auto;">
                                     <option value="" disabled selected>Pilih Klasifikasi Darah...</option>
                                     <option value="A">A (Emas Putih / Platinum)</option>
                                     <option value="B">B (Rose Gold / Perak Oksidasi)</option>
@@ -164,11 +160,11 @@
                         <h3 class="text-sm font-bold text-pink-600 mb-3 tracking-widest uppercase font-serif" style="color: #db2777;">Data Mempelai Wanita</h3>
                         <div>
                             <label class="block text-xs font-medium text-gray-400 mb-1.5">Tanggal Lahir Wanita</label>
-                            <input type="date" id="tanggalLahirPasangan" class="w-full bg-black border border-gray-700 rounded-xl px-4 py-3 text-gray-200 focus:outline-none focus:border-pink-600 transition text-sm">
+                            <input type="date" id="tanggalLahirPasangan" class="w-full bg-black border border-gray-700 rounded-xl px-4 py-3 text-gray-200 focus:outline-none focus:border-pink-600 focus:ring-1 focus:ring-pink-600 transition text-sm">
                         </div>
                         <div>
                             <label class="block text-xs font-medium text-gray-400 mb-1.5">Golongan Darah Wanita</label>
-                            <select id="darahPasangan" class="w-full bg-black border border-gray-700 rounded-xl px-4 py-3 text-gray-200 focus:outline-none focus:border-pink-600 transition text-sm" style="-webkit-appearance: auto;">
+                            <select id="darahPasangan" class="w-full bg-black border border-gray-700 rounded-xl px-4 py-3 text-gray-200 focus:outline-none focus:border-pink-600 focus:ring-1 focus:ring-pink-600 transition text-sm" style="-webkit-appearance: auto;">
                                 <option value="" disabled selected>Pilih Klasifikasi Darah...</option>
                                 <option value="A">A (Emas Putih / Platinum)</option>
                                 <option value="B">B (Rose Gold / Perak Oksidasi)</option>
@@ -236,7 +232,7 @@
                         <i data-lucide="scan-line" class="w-16 h-16 text-yellow-700" stroke-width="1"></i>
                     </div>
                     <h3 class="text-2xl font-serif text-gray-300 mb-3 tracking-wide" style="color:#d1d5db;">Kanvas Sistem Siaga</h3>
-                    <p class="text-gray-500 text-sm max-w-md leading-relaxed font-light text-justify-custom md:text-center">Sistem telah terhubung secara aman melalui Portal. Seluruh logika perlindungan desain dan arsitektur biometrik siap digunakan.</p>
+                    <p class="text-gray-500 text-sm max-w-md leading-relaxed font-light text-justify-custom md:text-center">Sistem telah terhubung secara aman melalui Portal. Menanti instruksi eksekusi matriks biometrik.</p>
                 </div>
 
                 <div id="resultState" class="hidden space-y-6 transition-all duration-700 opacity-0" style="display: none; opacity: 0; transition: opacity 0.5s;">
@@ -271,15 +267,15 @@
                         
                         <div class="bg-black border border-gray-800 rounded-2xl p-5 relative group hover:border-yellow-700/50 transition-colors">
                             <div class="flex justify-between items-center mb-3">
-                                <span class="text-xs font-bold flex items-center bg-gray-900 px-3 py-1 rounded-full" style="color: #eab308;">V1: Flush Setting (Solid/Padat)</span>
+                                <span class="text-xs font-bold flex items-center bg-gray-900 px-3 py-1 rounded-full" style="color: #eab308;">V1: Smooth Heritage (Mulus Klasik)</span>
                                 <button onclick="window.copyPrompt('prompt1')" class="text-gray-400 hover:text-yellow-500 p-1.5"><i data-lucide="copy" class="w-4 h-4"></i></button>
                             </div>
                             <p id="prompt1" class="text-[11px] text-gray-500 font-mono select-all text-justify-custom leading-relaxed bg-[#0a0a0c] p-4 rounded-xl"></p>
                         </div>
-
+                        
                         <div class="bg-black border border-gray-800 rounded-2xl p-5 relative group hover:border-yellow-700/50 transition-colors">
                             <div class="flex justify-between items-center mb-3">
-                                <span class="text-xs font-bold flex items-center bg-gray-900 px-3 py-1 rounded-full" style="color: #eab308;">V2: Tension Setting (Rongga Udara)</span>
+                                <span class="text-xs font-bold flex items-center bg-gray-900 px-3 py-1 rounded-full" style="color: #eab308;">V2: Stepped Architectural (Pahat Bersudut Tajam)</span>
                                 <button onclick="window.copyPrompt('prompt2')" class="text-gray-400 hover:text-yellow-500 p-1.5"><i data-lucide="copy" class="w-4 h-4"></i></button>
                             </div>
                             <p id="prompt2" class="text-[11px] text-gray-500 font-mono select-all text-justify-custom leading-relaxed bg-[#0a0a0c] p-4 rounded-xl"></p>
@@ -287,12 +283,12 @@
 
                         <div class="bg-black border border-gray-800 rounded-2xl p-5 relative group hover:border-yellow-700/50 transition-colors">
                             <div class="flex justify-between items-center mb-3">
-                                <span class="text-xs font-bold flex items-center bg-gray-900 px-3 py-1 rounded-full" style="color: #eab308;">V3: Cabochon Dome (Membulat)</span>
+                                <span class="text-xs font-bold flex items-center bg-gray-900 px-3 py-1 rounded-full" style="color: #eab308;">V3: Symmetrical Round Dome (Kubah Bulat Simetris)</span>
                                 <button onclick="window.copyPrompt('prompt3')" class="text-gray-400 hover:text-yellow-500 p-1.5"><i data-lucide="copy" class="w-4 h-4"></i></button>
                             </div>
                             <p id="prompt3" class="text-[11px] text-gray-500 font-mono select-all text-justify-custom leading-relaxed bg-[#0a0a0c] p-4 rounded-xl"></p>
                         </div>
-                        
+
                         <div class="bg-black border border-indigo-900 rounded-2xl p-5 relative group hover:border-indigo-600 transition-colors">
                             <div class="flex justify-between items-center mb-3">
                                 <span class="text-xs font-bold flex items-center bg-indigo-950/50 px-3 py-1 rounded-full" style="color: #818cf8;">V4: Vertical Technical Blueprint</span>
@@ -311,7 +307,7 @@
         <span id="toastText" class="font-semibold text-sm">Pesan Berhasil</span>
     </div>
 
-    <!-- ================= LOGIKA FIREBASE (LOGIN/LOGOUT) ================= -->
+    <!-- LOGIKA FIREBASE (LOGIN/LOGOUT) -->
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
         import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
@@ -378,7 +374,7 @@
         }
     </script>
 
-    <!-- ================= LOGIKA APLIKASI UTAMA (DNA CINCIN FULL LOGIC) ================= -->
+    <!-- LOGIKA APLIKASI UTAMA (DNA CINCIN FULL LOGIC) -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             try { lucide.createIcons(); } catch (e) {}
@@ -439,8 +435,8 @@
 
         const mappings = {
             gender: {
-                "pria": { structure: "substantial masculine band", loreEnEnd: "A commanding monument of inner strength.", loreIdEnd: "Sebuah monumen kewibawaan dan keteguhan batin.", prefix: ["Valerius", "Aurelius", "Invictus", "Dominus", "Ignis", "Ferrum", "Caelum", "Leonidas"] },
-                "wanita": { structure: "intricate hyper-feminine interwoven bands", loreEnEnd: "An ethereal emblem of graceful power.", loreIdEnd: "Sebuah lambang keanggunan dan pesona abadi.", prefix: ["Aurelia", "Luna", "Aeterna", "Stella", "Regina", "Flavia", "Bellona", "Celeste"] }
+                "pria": { prefix: ["Valerius", "Aurelius", "Invictus", "Dominus", "Ignis", "Ferrum", "Caelum", "Leonidas"], loreEnEnd: "A commanding monument of inner strength.", loreIdEnd: "Sebuah monumen kewibawaan dan keteguhan batin." },
+                "wanita": { prefix: ["Aurelia", "Luna", "Aeterna", "Stella", "Regina", "Flavia", "Bellona", "Celeste"], loreEnEnd: "An ethereal emblem of graceful power.", loreIdEnd: "Sebuah lambang keanggunan dan pesona abadi." }
             },
             aura: {
                 "minimalis": { prompt: "ultra-modern minimalist layout, bright sterile studio light", light: "crisp clean luxury presentation" },
@@ -449,24 +445,24 @@
                 "vintage": { prompt: "museum antique heirloom style, soft diffused studio light", light: "warm nostalgic ambient light on textured stone or velvet" }
             },
             darah: {
-                "A": { metal: "flawless high-polish Platinum and White Gold", name: "Platinum / Emas Putih", texture: "mirror-finish smoothness", loreId: "keteraturan presisi batin", loreEn: "absolute precision and unbroken order" },
-                "B": { metal: "raw Rose Gold fused with oxidized Silver", name: "Rose Gold / Perak Oksidasi", texture: "hand-hammered artisan roughness", loreId: "insting kebebasan berkreasi", loreEn: "wild creativity and untamed freedom" },
-                "AB": { metal: "folded Damascus Steel paired with Titanium", name: "Baja Damaskus / Titanium", texture: "topographical moiré patterns", loreId: "dualitas logika misterius", loreEn: "enigmatic duality and deep mystery" },
-                "O": { metal: "solid 24k Yellow Gold reinforced with Tungsten", name: "Emas Kuning 24k Solid", texture: "imposing monolithic solid geometry", loreId: "tekad kepemimpinan monolitik", loreEn: "commanding willpower and monolithic leadership" }
+                "A": { metal: "flawless high-polish Platinum and White Gold", name: "Platinum/Emas Putih", texture: "mirror-finish smoothness", loreId: "keteraturan presisi batin", loreEn: "absolute precision and unbroken order" },
+                "B": { metal: "raw Rose Gold fused with oxidized Silver", name: "Rose Gold/Perak", texture: "hand-hammered artisan roughness", loreId: "insting kebebasan berkreasi", loreEn: "wild creativity and untamed freedom" },
+                "AB": { metal: "folded Damascus Steel paired with Titanium", name: "Damascus/Titanium", texture: "topographical moiré patterns", loreId: "dualitas logika misterius", loreEn: "enigmatic duality and deep mystery" },
+                "O": { metal: "solid 24k Yellow Gold reinforced with Tungsten", name: "Emas Kuning Solid", texture: "imposing monolithic solid geometry", loreId: "tekad kepemimpinan monolitik", loreEn: "commanding willpower and monolithic leadership" }
             },
             shio: {
-                "Naga": { gem: "a brilliant blood-red Ruby gemstone", metalCenterpiece: "solid metal shield with geometric scale-like textures", metalCenterpieceWanita: "graceful overlapping draconic scale-like filigree", loreId: "ambisi penguasa yang tak terbantahkan", loreEn: "the undeniable ambition and majestic dominance of an emperor", sfx: ["Agni", "Tejas"] },
-                "Macan": { gem: "a hypnotic chatoyant Tiger's Eye gemstone", metalCenterpiece: "bold focal plates with asymmetrical stripe reliefs", metalCenterpieceWanita: "elegant sweeping asymmetrical stripe reliefs", loreId: "keberanian buas yang hening", loreEn: "silent, fierce courage and an indomitable fighting spirit", sfx: ["Vyaghra", "Virya"] },
-                "Kelinci": { gem: "a flawless green Jadeite gemstone", metalCenterpiece: "smooth polished metal domes with flowing curves", loreId: "kebijaksanaan intuisi lembut", loreEn: "serene intuition and untouchable, peaceful wisdom", sfx: ["Soma", "Shanti"] },
-                "Kuda": { gem: "a sharp custom-cut black Obsidian", metalCenterpiece: "aerodynamic metal crests with kinetic velocity lines", metalCenterpieceWanita: "fluid elegant kinetic velocity curves", loreId: "momentum progres tanpa henti", loreEn: "unstoppable momentum and a fiercely independent nature", sfx: ["Ashva", "Vega"] },
-                "Kerbau": { gem: "a metallic-luster Hematite stone", metalCenterpiece: "heavy brutalist structural metal blocks", metalCenterpieceWanita: "bold but elegant architectural facets", loreId: "integritas ketahanan kokoh", loreEn: "unshakable integrity and monumental, resilient strength", sfx: ["Dhara", "Bala"] },
-                "Tikus": { gem: "a tight cluster of brilliant blue Sapphires", metalCenterpiece: "maze-like interlocking micro gear systems", metalCenterpieceWanita: "intricate interlocking labyrinthine lacework", loreId: "kecerdikan taktik strategis", loreEn: "an agile intellect and a brilliantly sharp, strategic mind", sfx: ["Vidya", "Buddhi"] },
-                "Ular": { gem: "a mesmerizing Colombian Emerald", metalCenterpiece: "twisting metal knots forming continuous seamless coils", loreId: "pesona wawasan rahasia kuno", loreEn: "hypnotic charm and ancient, quietly observant wisdom", sfx: ["Maya", "Tantra"] },
-                "Kambing": { gem: "a rare, lustrous baroque Pearl centerpiece", metalCenterpiece: "intricate metallic botanical and floral carvings", loreId: "harmoni sensitivitas seni tinggi", loreEn: "profound artistic sensitivity and pure inner harmony", sfx: ["Kala", "Rupa"] },
-                "Monyet": { gem: "a brilliant color-changing Alexandrite gemstone", metalCenterpiece: "unconventional kinetic rotating metal rings", metalCenterpieceWanita: "delicate kinetic rotating orbital bands", loreId: "inovasi taktik dinamis lincah", loreEn: "dynamic brilliance and a wildly inventive ingenuity", sfx: ["Chanchala", "Lila"] },
-                "Ayam": { gem: "A HUGE D-FLAWLESS IDEAL-CUT DIAMOND", metalCenterpiece: "magnificent solid metal sun-ray crown configurations", metalCenterpieceWanita: "delicate radiating sun-burst crown filigree", loreId: "percaya diri fajar memancar", loreEn: "a radiant, piercing confidence and an unyielding pride", sfx: ["Surya", "Jyoti"] },
-                "Anjing": { gem: "a deep starry Lapis Lazuli with pyrite", metalCenterpiece: "impenetrable thick-walled protective bezel vaults", metalCenterpieceWanita: "elegant protective interwoven vaulting", loreId: "kesetiaan naluri pelindung sejati", loreEn: "absolute loyalty and a profoundly protective instinct", sfx: ["Dharma", "Satya"] },
-                "Babi": { gem: "a honey-colored transparent Citrine", metalCenterpiece: "polished plump rounded signet volumes", loreId: "kemakmuran tulus kaya hati", loreEn: "generous warmth, kindness, and true inner prosperity", sfx: ["Dhana", "Ratna"] }
+                "Naga": { gem: "Ruby", metalCenterpiece: "solid metal shield with geometric scale-like textures", metalCenterpieceWanita: "graceful overlapping draconic scale-like filigree", loreId: "ambisi penguasa yang tak terbantahkan", loreEn: "the undeniable ambition and majestic dominance of an emperor", sfx: ["Agni", "Tejas"] },
+                "Macan": { gem: "Tiger's Eye", metalCenterpiece: "bold focal plates with asymmetrical stripe reliefs", metalCenterpieceWanita: "elegant sweeping asymmetrical stripe reliefs", loreId: "keberanian buas yang hening", loreEn: "silent, fierce courage and an indomitable fighting spirit", sfx: ["Vyaghra", "Virya"] },
+                "Kelinci": { gem: "Jadeite", metalCenterpiece: "smooth polished metal domes with flowing curves", metalCenterpieceWanita: "smooth polished metal domes with flowing curves", loreId: "kebijaksanaan intuisi lembut", loreEn: "serene intuition and untouchable, peaceful wisdom", sfx: ["Soma", "Shanti"] },
+                "Kuda": { gem: "Obsidian", metalCenterpiece: "aerodynamic metal crests with kinetic velocity lines", metalCenterpieceWanita: "fluid elegant kinetic velocity curves", loreId: "momentum progres tanpa henti", loreEn: "unstoppable momentum and a fiercely independent nature", sfx: ["Ashva", "Vega"] },
+                "Kerbau": { gem: "Hematite stone", metalCenterpiece: "heavy brutalist structural metal blocks", metalCenterpieceWanita: "bold but elegant architectural facets", loreId: "integritas ketahanan kokoh", loreEn: "unshakable integrity and monumental, resilient strength", sfx: ["Dhara", "Bala"] },
+                "Tikus": { gem: "Sapphires", metalCenterpiece: "maze-like interlocking micro gear systems", metalCenterpieceWanita: "intricate interlocking labyrinthine lacework", loreId: "kecerdikan taktik strategis", loreEn: "an agile intellect and a brilliantly sharp, strategic mind", sfx: ["Vidya", "Buddhi"] },
+                "Ular": { gem: "Emerald", metalCenterpiece: "twisting metal knots forming continuous seamless coils", metalCenterpieceWanita: "twisting metal knots forming continuous seamless coils", loreId: "pesona wawasan rahasia kuno", loreEn: "hypnotic charm and ancient, quietly observant wisdom", sfx: ["Maya", "Tantra"] },
+                "Kambing": { gem: "Pearl", metalCenterpiece: "intricate metallic botanical and floral carvings", metalCenterpieceWanita: "intricate metallic botanical and floral carvings", loreId: "harmoni sensitivitas seni tinggi", loreEn: "profound artistic sensitivity and pure inner harmony", sfx: ["Kala", "Rupa"] },
+                "Monyet": { gem: "Alexandrite", metalCenterpiece: "unconventional kinetic rotating metal rings", metalCenterpieceWanita: "delicate kinetic rotating orbital bands", loreId: "inovasi taktik dinamis lincah", loreEn: "dynamic brilliance and a wildly inventive ingenuity", sfx: ["Chanchala", "Lila"] },
+                "Ayam": { gem: "D-FLAWLESS DIAMOND", metalCenterpiece: "magnificent solid metal sun-ray crown configurations", metalCenterpieceWanita: "delicate radiating sun-burst crown filigree", loreId: "percaya diri fajar memancar", loreEn: "a radiant, piercing confidence and an unyielding pride", sfx: ["Surya", "Jyoti"] },
+                "Anjing": { gem: "Lapis Lazuli", metalCenterpiece: "impenetrable thick-walled protective bezel vaults", metalCenterpieceWanita: "elegant protective interwoven vaulting", loreId: "kesetiaan naluri pelindung sejati", loreEn: "absolute loyalty and a profoundly protective instinct", sfx: ["Dharma", "Satya"] },
+                "Babi": { gem: "Citrine", metalCenterpiece: "polished plump rounded signet volumes", metalCenterpieceWanita: "polished plump rounded signet volumes", loreId: "kemakmuran tulus kaya hati", loreEn: "generous warmth, kindness, and true inner prosperity", sfx: ["Dhana", "Ratna"] }
             },
             weton: {
                 "Legi": { sfx: "Ananda", style: "obsessively detailed filigree wirework", loreId: "keluwesan aliran pesona harmonis", loreEn: "graceful, flowing charm" },
@@ -487,8 +483,8 @@
         const jewelerReference = "Must maintain a strict, organized high-fashion jewelry presentation layout. The image MUST feature EXACTLY 4 photorealistic image panels: 1 large central hero panel showcasing the ring, surrounded by EXACTLY 3 smaller inset panels. These 3 smaller inset panels MUST show these specific angles: 1) TOP panel: flat bird's-eye view. 2) BOTTOM panel: perfectly round top-down view of the ring's hole showing ONE single solid metal inner band. 3) SIDE panel: direct side-profile elevation. CRITICAL TEXTURE CLONE: The SIDE panel MUST perfectly replicate and clone the exact intricate surface engravings, roots, and patterns seen on the side of the MAIN CENTRAL RING. CRITICAL MATERIAL LOCK: The exact distribution of metals shown in the main central panel MUST be perfectly replicated in all smaller inset panels. Do not randomly split or change the metal colors in the orthographic views. DO NOT create more than 3 inset panels. The backgrounds of these 3 inset panels MUST BLEND SEAMLESSLY with the ambient lighting and luxurious texture of the main central background.";
 
         function generateGoldsmithNotes(isWedding, darahPria, darahWanita, hasGem, tglUkiran, gender) {
-            let note = `<p><strong style="color: #818cf8;">Stabilitas V1 (Solid Forging):</strong> Mode V1 dikunci murni sebagai cincin berstruktur padat (solid body). Semua ukiran dipahat menempel pada bodi.</p>`;
-            note += `<p><strong style="color: #818cf8;">Audit Geometri & Warna (V4 Blueprint):</strong> Kami telah menerapkan dekonstruksi vertikal berbaris untuk memastikan proporsi ukuran komponen konsisten dan tidak terjadi penciptaan <i>plain ring</i> fiktif.</p>`;
+            let note = `<p><strong style="color: #818cf8;">Diferensiasi V1 & V2:</strong> V1 kini dikunci sebagai cincin berpermukaan <i>Smooth</i> (mulus & mengalir). V2 dikunci sebagai <i>Stepped Relief</i> bersudut tajam, bertingkat, dan agresif untuk membedakannya secara visual dari V1.</p>`;
+            note += `<p><strong style="color: #818cf8;">Simetri V3 (Dome):</strong> Modul V3 telah diperbaiki untuk secara absolut memproduksi kubah (dome) yang bulat sferis dan simetris, menolak segala bentuk oval/teardrop.</p>`;
             
             if(!isWedding) {
                 if(gender === 'wanita') {
@@ -498,44 +494,45 @@
                 }
             }
             if(isWedding) {
-                note += `<p><strong style="color: #f472b6;">Audit Proporsi Ganda:</strong> Pada Mode Pernikahan, AI telah dilarang menggambar kedua cincin dengan ketebalan maskulin. Cincin wanita dijamin proporsional ramping.</p>`;
-                if (darahPria !== darahWanita) {
-                    note += `<p><strong style="color: #818cf8;">Metalurgi Bimetal:</strong> Karena perbedaan sifat dasar logam, pengrajin diwajibkan mencetak dua jenis logam secara terpisah, kemudian menyatukannya menggunakan <i>Laser Welding</i> presisi.</p>`;
-                }
+                note += `<p><strong style="color: #f472b6;">Audit Proporsi Ganda:</strong> Pada Mode Pernikahan, cincin pria maskulin dan cincin wanita proporsional ramping.</p>`;
             }
-
             if(!hasGem) {
-                note += `<p><strong style="color: #818cf8;">Restriksi Material (Solid Metal):</strong> Sistem telah menyuntikkan deklarasi absolut "NO GEMSTONES / NO DIAMONDS" ke dalam matriks rendering untuk memastikan AI hanya fokus pada ukiran logam, menghilangkan risiko halusinasi visual.</p>`;
-            } else {
-                note += `<p><strong style="color: #60a5fa;">Fokus Gemologi:</strong> Batu permata utama difokuskan sebagai pusat perhatian dengan kualitas potongan tingkat <i>Masterpiece</i>.</p>`;
+                note += `<p><strong style="color: #818cf8;">Restriksi Material (Solid Metal):</strong> Sistem terproteksi absolut dari halusinasi visual permata.</p>`;
             }
 
             return note;
         }
 
+        // =========================================================================================
+        // REVISI ARCHETYPE MUTLAK (V1 SMOOTH vs V2 ANGULAR) & (V3 PERFECT SYMMETRY)
+        // =========================================================================================
         function getDesignArchetypes(focalPoint, wStyle, gStruct, dMetal, dTexture, isWedding, gender) {
             if (isWedding) {
                 return {
-                    heritage: `STYLE ARCHETYPE: Classic Comfort-Fit Bands. MACRO-SILHOUETTE: Solid Clean Flush Setting. CRITICAL: The ring bodies MUST be completely solid metal. NO openwork, NO hollow filigree, NO see-through gaps. The elements of ${wStyle} MUST be deeply engraved or embossed directly into the solid metal surfaces of both bands. The masculine band must be substantial (under 10mm) and the feminine band proportionally slender.`,
-                    avantGarde: `STYLE ARCHETYPE: Modern Architectural Bands. MACRO-SILHOUETTE: Geometric Tension Setting. The rings feature modern geometric gaps formed by ${wStyle} within their proportional band structures (masculine under 10mm, feminine slender).`,
-                    relic: `STYLE ARCHETYPE: Aged Hammered Bands. MACRO-SILHOUETTE: Solid Rounded Convex. The ${wStyle} wraps heavily around perfectly rounded convex bands. The masculine band is thick (under 10mm) while the feminine is elegantly scaled down.`
+                    heritage: `STYLE ARCHETYPE: Classic Seamless Comfort-Fit Bands. MACRO-SILHOUETTE: Smooth Continuous Flush Setting. CRITICAL: The ring bodies MUST be completely solid metal. The elements of ${wStyle} MUST be softly engraved directly into a perfectly smooth, continuous metal surface without harsh structural breaks. The masculine band must be substantial (under 10mm) and the feminine band proportionally slender.`,
+                    avantGarde: `STYLE ARCHETYPE: Modern Angular Architectural Bands. MACRO-SILHOUETTE: Bold Multi-Faceted Stepped Relief. The rings feature striking, sharp geometric layers and stepped architectural facets formed by ${wStyle} built over a COMPLETELY SOLID, proportional band structure. This must look distinctly angular, aggressive, and highly dimensional compared to a smooth classic band.`,
+                    relic: `STYLE ARCHETYPE: Aged Hammered Bands. MACRO-SILHOUETTE: Perfectly Symmetrical Rounded Convex. The ${wStyle} wraps heavily around perfectly symmetrical, rounded convex bands. The masculine band is thick (under 10mm) while the feminine is elegantly scaled down.`
                 };
             } else {
                 if (gender === 'wanita') {
                     return {
-                        heritage: `STYLE ARCHETYPE: Classic Elegant Heritage. MACRO-SILHOUETTE: Solid Clean Flush Setting. CRITICAL: The ring body MUST be completely solid metal. NO openwork, NO hollow filigree, NO see-through gaps. The ${focalPoint} is elegantly flush-set into a softly curved top face, and the ${wStyle} MUST be engraved directly into the solid surface. CRITICAL PROPORTIONS: Maximum 4mm wide band. Do NOT make it a fragile hair-thin wire. The side panel must show a sleek, solid feminine silhouette.`,
-                        avantGarde: `STYLE ARCHETYPE: Avant-Garde Slender. MACRO-SILHOUETTE: Slender Split-Shank Tension Setting. The ${focalPoint} floats beautifully within negative space, held by refined, graceful split-bands of ${wStyle}. CRITICAL PROPORTIONS: Maximum 4mm wide band. The side panel must highlight the elegant negative space side-profile cloning the exact textures of the main ring.`,
-                        relic: `STYLE ARCHETYPE: Ancient Relic Slender. MACRO-SILHOUETTE: Petite Dome on Slender Band. The ${focalPoint} is elegantly enveloped by a small feminine teardrop dome of ${wStyle} featuring ${dTexture}. CRITICAL PROPORTIONS: Maximum 4mm wide band. The side panel must show a graceful convex side silhouette cloning the exact intricate organic relic texture of the main ring.`
+                        heritage: `STYLE ARCHETYPE: Classic Elegant Heritage. MACRO-SILHOUETTE: Smooth Symmetrical Flush Setting. CRITICAL: The ring body MUST be completely solid metal. The ${focalPoint} is elegantly flush-set into a perfectly smooth, softly curved continuous top face. The ${wStyle} MUST be delicately engraved directly into the solid surface without harsh edges. CRITICAL PROPORTIONS: Maximum 4mm wide band. The side panel must show a sleek, smooth feminine silhouette.`,
+                        avantGarde: `STYLE ARCHETYPE: Avant-Garde Geometric. MACRO-SILHOUETTE: Sharp Multi-Faceted Angular Relief. The ${focalPoint} is secured by sharp, aggressive, interlocking metallic layers of ${wStyle} sculpted over a COMPLETELY SOLID thin background layer. This design must feature striking, distinct angular geometry and highly dimensional stepped facets, distinctly different from a standard smooth band. CRITICAL PROPORTIONS: Maximum 4mm wide band. The side panel must highlight the sharp, angular stepped-relief side-profile.`,
+                        relic: `STYLE ARCHETYPE: Ancient Relic Slender. MACRO-SILHOUETTE: Perfectly Symmetrical Round Dome on Slender Band. The ${focalPoint} is elegantly enveloped by a perfectly circular, strictly symmetrical spherical dome of ${wStyle} featuring ${dTexture}. NO teardrop or oval shapes. CRITICAL PROPORTIONS: Maximum 4mm wide band. The side panel must show a perfectly symmetrical convex dome side silhouette.`
                     };
                 } else {
                     return {
-                        heritage: `STYLE ARCHETYPE: Classic Heavy Comfort-Fit Band. MACRO-SILHOUETTE: Solid Clean Flush Setting. CRITICAL: The ring body MUST be completely solid metal. NO openwork, NO hollow filigree, NO see-through gaps. The ${focalPoint} is flush-set into a substantial band, and the ${wStyle} MUST be engraved directly into the solid surface. CRITICAL PROPORTIONS: The band MUST NOT exceed 10mm (1 cm) in width. The side panel must show a solid band silhouette.`,
-                        avantGarde: `STYLE ARCHETYPE: Modern Architectural Band. MACRO-SILHOUETTE: Geometric Tension Setting. The ${focalPoint} is held by thick, sharp, modern geometric ${wStyle} integrated into a substantial band structure. CRITICAL PROPORTIONS: The band MUST NOT exceed 10mm (1 cm) in width. The side profile clones the exact sharp geometric engravings.`,
-                        relic: `STYLE ARCHETYPE: Aged Hammered Band. MACRO-SILHOUETTE: Heavy Rounded Convex. The ${focalPoint} is integrated into a thick, heavy, rounded convex band of ${wStyle} featuring heavily distressed ${dTexture}. CRITICAL PROPORTIONS: The band MUST NOT exceed 10mm (1 cm) in width. The side panel clones the exact distressed ancient engravings.`
+                        heritage: `STYLE ARCHETYPE: Classic Heavy Comfort-Fit Band. MACRO-SILHOUETTE: Smooth Continuous Signet Style. CRITICAL: The ring body MUST be completely solid metal. The ${focalPoint} is flush-set into a smooth, substantial, continuous band. The ${wStyle} MUST be smoothly engraved directly into the solid surface without harsh geometric breaks. CRITICAL PROPORTIONS: The band MUST NOT exceed 10mm (1 cm) in width. The side panel must show a smooth solid band silhouette.`,
+                        avantGarde: `STYLE ARCHETYPE: Modern Angular Architectural Band. MACRO-SILHOUETTE: Bold Multi-Faceted Stepped Relief. The ${focalPoint} is framed by thick, sharp, highly dimensional stepped geometric facets of ${wStyle} integrated into a COMPLETELY SOLID substantial band structure. This must look distinctly industrial, angular, and aggressive. CRITICAL PROPORTIONS: The band MUST NOT exceed 10mm (1 cm) in width. The side profile must show striking, sharp geometric stepped facets.`,
+                        relic: `STYLE ARCHETYPE: Aged Hammered Band. MACRO-SILHOUETTE: Perfectly Symmetrical Heavy Rounded Convex. The ${focalPoint} is integrated into a perfectly symmetrical, thick, heavy, rounded convex band of ${wStyle} featuring heavily distressed ${dTexture}. NO oval shapes. CRITICAL PROPORTIONS: The band MUST NOT exceed 10mm (1 cm) in width. The side panel clones the exact distressed ancient engravings.`
                     };
                 }
             }
         }
+
+        // =========================================================================
+        // ENGINE RENDER & FORM SUBMIT (FUNGSI YANG HILANG TELAH DIPULIHKAN)
+        // =========================================================================
 
         function renderPersonal(gender, tgl, darah, shio, weton, aura, hasGem) {
             const mGen = mappings.gender[gender];
@@ -544,15 +541,14 @@
             const mShio = mappings.shio[shio];
             const mWeton = mappings.weton[weton];
 
-            document.getElementById('calcPillar1').textContent = `Sistem: ${shio}`;
-            document.getElementById('calcPillar2').textContent = `Struktur: ${weton}`;
-
             const seed = tgl + gender + darah;
             const pfx = mGen.prefix[getDeterministicIndex(seed + "p1", mGen.prefix.length)];
             const sfx = mShio.sfx[getDeterministicIndex(seed + "s1", mShio.sfx.length)];
             const finalName = `${pfx} ${mWeton.sfx} ${sfx}`;
             
             document.getElementById('ringName').textContent = finalName;
+            document.getElementById('calcPillar1').textContent = `Sistem: ${shio}`;
+            document.getElementById('calcPillar2').textContent = `Struktur: ${weton}`;
             document.getElementById('ringMeaning').textContent = `"Manifestasi Artefak ${gender === 'pria' ? 'Pria' : 'Wanita'} - Data Biometrik Terkunci"`;
 
             document.getElementById('analysisText').innerHTML = `
@@ -570,11 +566,12 @@
                 focalPoint = (gender === 'wanita' && mShio.metalCenterpieceWanita) ? mShio.metalCenterpieceWanita : mShio.metalCenterpiece;
             }
             
-            const gemConstraint = hasGem 
-                ? "THE GEMSTONE MUST BE THE CLEAR CENTERPIECE." 
-                : "STRICTLY NO GEMSTONES. NO DIAMONDS. PURE SOLID INTENSE METALWORK ONLY.";
-                
-            const antiHallucination = `ABSOLUTELY NO BLUEPRINTS. NO HARSH WHITE GRID BORDERS. ${gemConstraint}`;
+            let antiHallucination = `ABSOLUTELY NO BLUEPRINTS. NO HARSH WHITE GRID BORDERS. `;
+            if (hasGem) {
+                antiHallucination += "THE GEMSTONE MUST BE THE CLEAR CENTERPIECE.";
+            } else {
+                antiHallucination += "STRICTLY NO GEMSTONES. NO DIAMONDS. PURE SOLID INTENSE METALWORK ONLY.";
+            }
 
             const innerEngraving = `The ring features a subtle, highly contrasting legible text engraving reading exactly: "${tgl}". CRITICAL MANDATE: This exact text engraving MUST be clearly visible painted on the inner bottom shank of the massive MAIN CENTRAL RING ONLY. Do NOT put any text in the smaller inset panels.`;
             const loreEn = `Forged for a soul of ${mDarah.loreEn}. Character manifesting ${mShio.loreEn}, aligned with ${mWeton.loreEn}. ${mGen.loreEnEnd}`;
@@ -587,7 +584,7 @@
             document.getElementById('prompt2').textContent = `${baseLayout} ${archetypes.avantGarde} ${physicsRules} ${innerEngraving} Light: ${mAura.light}. ${quality}`;
             document.getElementById('prompt3').textContent = `${baseLayout} ${archetypes.relic} ${physicsRules} ${innerEngraving} Light: ${mAura.light}. ${quality}`;
             
-            document.getElementById('prompt4').textContent = `A professional jewelry technical blueprint presentation poster layout, STRICT VERTICAL EXPLODED VIEW format. Showcasing the ring disassembled vertically from top-to-bottom: 1) The fully assembled ring at the top, 2) The external structural intricate relief-layer (with ${focalPoint} intact and featuring ${mWeton.style}) floating in the middle, 3) The internal smooth comfort-fit solid band core at the bottom. Component sizes must perfectly match each other vertically. CRITICAL SYMMETRY: All layers MUST retain the exact same metal colors and textures as the V1 reference. NO COLOR HALLUCINATION. ${gemConstraint} Symmetrical industrial design rendering, high technical fidelity, seamless luxury ${mAura.prompt} background. Included gold technical text at the bottom reads exactly: "${finalName} - Component Separation Map". ${quality}`;
+            document.getElementById('prompt4').textContent = `A professional jewelry technical blueprint presentation poster layout, STRICT VERTICAL EXPLODED VIEW format. Showcasing the ring disassembled vertically from top-to-bottom: 1) The fully assembled ring at the top, 2) The external structural intricate relief-layer (with ${focalPoint} intact and featuring ${mWeton.style}) floating in the middle, 3) The internal smooth comfort-fit solid band core at the bottom. Component sizes must perfectly match each other vertically. CRITICAL SYMMETRY: All layers MUST retain the exact same metal colors and textures as the V1 reference. NO COLOR HALLUCINATION. Symmetrical industrial design rendering, high technical fidelity, seamless luxury ${mAura.prompt} background. Included gold technical text at the bottom reads exactly: "${finalName} - Component Separation Map". ${quality}`;
         }
 
         function renderWedding(tglP, darahP, shioP, wetonP, tglW, darahW, dinamika, tglNikah, aura, hasGem) {
@@ -626,11 +623,7 @@
 
             const quality = "Masterpiece luxury wedding ring catalog photography, matching couple ring set, highly intricate, extreme precision, 8k, octane render, seamless editorial poster layout.";
             
-            const gemConstraint = hasGem 
-                ? "THE CENTERPIECE GEMSTONES MUST BE THE FOCUS." 
-                : "STRICTLY NO GEMSTONES. NO DIAMONDS. PURE SOLID INTERLOCKING METALS ONLY.";
-
-            const antiHallucination = `ABSOLUTELY NO BLUEPRINTS. NO HARSH WHITE GRID BORDERS. ALL IMAGES MUST SHOW REAL PHOTOREALISTIC RINGS RESTING ON LUXURY FABRICS. ${gemConstraint}`;
+            let antiHallucination = `ABSOLUTELY NO BLUEPRINTS. NO HARSH WHITE GRID BORDERS. ALL IMAGES MUST SHOW REAL PHOTOREALISTIC RINGS RESTING ON LUXURY FABRICS. `;
             
             const focalPria = hasGem ? mShioP.gem : mShioP.metalCenterpiece;
             const focalWanita = hasGem ? mShioW.gem : (mShioW.metalCenterpieceWanita || mShioW.metalCenterpiece);
@@ -639,8 +632,10 @@
 
             if(hasGem) {
                 metalInteraction += ` The masculine band features a focused ${focalPria}, while the feminine band elegantly holds ${focalWanita}.`;
+                antiHallucination += "THE CENTERPIECE GEMSTONES MUST BE THE FOCUS.";
             } else {
                 metalInteraction += ` The masculine band features ${focalPria}, while the feminine band elegantly features ${focalWanita}.`;
+                antiHallucination += "STRICTLY NO GEMSTONES. NO DIAMONDS. PURE SOLID INTERLOCKING METALS ONLY.";
             }
 
             const innerEngraving = `Both rings feature a subtle, highly contrasting legible text engraving reading exactly: "${tglNikah}". CRITICAL MANDATE: This text engraving MUST be clearly visible painted on the inner bottom shanks of the MAIN CENTRAL RINGS ONLY. Do NOT put any text in the smaller inset panels.`;
@@ -654,102 +649,156 @@
             document.getElementById('prompt2').textContent = `${baseLayout} ${archetypes.avantGarde} ${metalInteraction} ${physicsRules} ${innerEngraving} Light: ${mAura.light}. ${quality}`;
             document.getElementById('prompt3').textContent = `${baseLayout} ${archetypes.relic} ${metalInteraction} ${physicsRules} ${innerEngraving} Light: ${mAura.light}. ${quality}`;
             
-            document.getElementById('prompt4').textContent = `A premium jewelry manufacturing technical catalog presentation layout, STRICT VERTICAL EXPLODED VIEW format. Showcasing the dual matching rings separated into EXACTLY TWO distinct vertical columns side-by-side. LEFT COLUMN: Masculine ring deconstruction. RIGHT COLUMN: Feminine ring deconstruction. Within EACH vertical column, the ring is disassembled top-to-bottom: 1) The fully assembled ring at the top, 2) The exterior structural intricate relief jacket (with centerpieces intact, featuring ${focalPria} and ${focalWanita}) floating in the middle, 3) The solid smooth inner core bases at the bottom. Component sizes must perfectly match vertically within their respective columns. CRITICAL COMPONENT LIMIT: Do NOT mix components across columns. Do NOT invent extra plain inner or outer rings. The components shown MUST EXACTLY assemble into the V1 reference without any leftover parts. Metal colors MUST strictly follow the V1 reference. ${gemConstraint} Flawless object clarity, strict orthographic layer layout mapping, absolute production detail. Fine elegant gold typography reads exactly: "${finalName} - Dual Bimetal Deconstruction Mapping". ${quality}`;
+            document.getElementById('prompt4').textContent = `A premium jewelry manufacturing technical catalog presentation layout, STRICT VERTICAL EXPLODED VIEW format. Showcasing the dual matching rings separated into EXACTLY TWO distinct vertical columns side-by-side. LEFT COLUMN: Masculine ring deconstruction. RIGHT COLUMN: Feminine ring deconstruction. Within EACH vertical column, the ring is disassembled top-to-bottom: 1) The fully assembled ring at the top, 2) The exterior structural intricate relief jacket (with centerpieces intact, featuring ${focalPria} and ${focalWanita}) floating in the middle, 3) The solid smooth inner core bases at the bottom. Component sizes must perfectly match vertically within their respective columns. CRITICAL COMPONENT LIMIT: Do NOT mix components across columns. Do NOT invent extra plain inner or outer rings. The components shown MUST EXACTLY assemble into the V1 reference without any leftover parts. Metal colors MUST strictly follow the V1 reference. Flawless object clarity, strict orthographic layer layout mapping, absolute production detail. Fine elegant gold typography reads exactly: "${finalName} - Dual Bimetal Deconstruction Mapping". ${quality}`;
         }
 
         window.handleFormSubmit = function(e) {
-            e.preventDefault(); 
-            
-            const isWedding = document.getElementById('typeWedding').checked;
-            
-            const tglUtama = document.getElementById('tanggalLahir').value;
-            const darahUtama = document.getElementById('darah').value;
-            const auraVal = document.getElementById('aura').value;
-            
-            if (!tglUtama || !darahUtama || !auraVal) {
-                window.showToast("Kesalahan: Harap lengkapi Data Pemesan Utama secara penuh.", true);
-                return;
-            }
-
-            if (isWedding) {
-                const tglWanita = document.getElementById('tanggalLahirPasangan').value;
-                const darahWanita = document.getElementById('darahPasangan').value;
-                const tglNikah = document.getElementById('tanggalNikah').value;
+            try {
+                if(e) e.preventDefault(); 
                 
-                if (!tglWanita || !darahWanita || !tglNikah) {
-                    window.showToast("Kesalahan: Data Mempelai Wanita atau Tanggal Akad belum lengkap.", true);
+                const radioWedding = document.getElementById('typeWedding');
+                const isWedding = radioWedding ? radioWedding.checked : false;
+                
+                const tglUtamaEl = document.getElementById('tanggalLahir');
+                const darahUtamaEl = document.getElementById('darah');
+                const auraValEl = document.getElementById('aura');
+                
+                const tglUtama = tglUtamaEl ? tglUtamaEl.value : "";
+                const darahUtama = darahUtamaEl ? darahUtamaEl.value : "";
+                const auraVal = auraValEl ? auraValEl.value : "";
+                
+                if (!tglUtama || !darahUtama || !auraVal) {
+                    window.showToast("Kesalahan: Harap lengkapi Data Pemesan Utama secara penuh.", true);
                     return;
                 }
-            }
 
-            const hasGem = document.querySelector('input[name="permata"]:checked').value === 'ya';
-            const genderVal = document.querySelector('input[name="gender"]:checked').value;
-            
-            const shioUtama = calculateShio(tglUtama);
-            const wetonUtama = calculateWeton(tglUtama);
-
-            const submitBtn = document.getElementById('submitBtn');
-            const btnIcon = document.getElementById('btnIcon');
-            const btnLoader = document.getElementById('btnLoader');
-            const resultState = document.getElementById('resultState');
-            
-            resultState.style.opacity = '0';
-            
-            btnIcon.style.display = 'none';
-            btnLoader.style.display = 'block';
-            submitBtn.disabled = true;
-
-            setTimeout(() => {
-                if (!isWedding) {
-                    renderPersonal(genderVal, tglUtama, darahUtama, shioUtama, wetonUtama, auraVal, hasGem);
-                } else {
-                    const tglWanita = document.getElementById('tanggalLahirPasangan').value;
-                    const darahWanita = document.getElementById('darahPasangan').value;
-                    const dinamikaVal = document.getElementById('dinamika').value;
-                    const tglNikah = document.getElementById('tanggalNikah').value;
-                    renderWedding(tglUtama, darahUtama, shioUtama, wetonUtama, tglWanita, darahWanita, dinamikaVal, tglNikah, auraVal, hasGem);
+                if (isWedding) {
+                    const tglWanitaEl = document.getElementById('tanggalLahirPasangan');
+                    const darahWanitaEl = document.getElementById('darahPasangan');
+                    const tglNikahEl = document.getElementById('tanggalNikah');
+                    
+                    const tglWanita = tglWanitaEl ? tglWanitaEl.value : "";
+                    const darahWanita = darahWanitaEl ? darahWanitaEl.value : "";
+                    const tglNikah = tglNikahEl ? tglNikahEl.value : "";
+                    
+                    if (!tglWanita || !darahWanita || !tglNikah) {
+                        window.showToast("Kesalahan: Data Mempelai Wanita atau Tanggal Akad belum lengkap.", true);
+                        return;
+                    }
                 }
 
-                btnIcon.style.display = 'block';
-                btnLoader.style.display = 'none';
-                submitBtn.disabled = false;
+                const permataEl = document.querySelector('input[name="permata"]:checked');
+                const hasGem = permataEl ? (permataEl.value === 'ya') : false;
                 
-                document.getElementById('emptyState').style.display = 'none';
-                resultState.style.display = 'block';
+                const genderEl = document.querySelector('input[name="gender"]:checked');
+                const genderVal = genderEl ? genderEl.value : 'pria';
                 
-                setTimeout(() => {
-                    resultState.style.opacity = '1';
-                    resultState.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }, 50);
+                const shioUtama = calculateShio(tglUtama);
+                const wetonUtama = calculateWeton(tglUtama);
 
-            }, 1000);
+                const submitBtn = document.getElementById('submitBtn');
+                const btnIcon = document.getElementById('btnIcon');
+                const btnLoader = document.getElementById('btnLoader');
+                
+                const resultState = document.getElementById('resultState');
+                if(resultState) resultState.style.opacity = '0';
+
+                if(submitBtn && btnIcon && btnLoader) {
+                    btnIcon.style.display = 'none';
+                    btnLoader.style.display = 'block';
+                    submitBtn.disabled = true;
+                    submitBtn.classList.add('opacity-80', 'cursor-wait');
+                }
+
+                setTimeout(() => {
+                    try {
+                        if (!isWedding) {
+                            renderPersonal(genderVal, tglUtama, darahUtama, shioUtama, wetonUtama, auraVal, hasGem);
+                        } else {
+                            const tglWanita = document.getElementById('tanggalLahirPasangan').value;
+                            const darahWanita = document.getElementById('darahPasangan').value;
+                            const dinamikaEl = document.getElementById('dinamika');
+                            const dinamikaVal = dinamikaEl ? dinamikaEl.value : "yinyang";
+                            const tglNikah = document.getElementById('tanggalNikah').value;
+                            renderWedding(tglUtama, darahUtama, shioUtama, wetonUtama, tglWanita, darahWanita, dinamikaVal, tglNikah, auraVal, hasGem);
+                        }
+
+                        if(submitBtn && btnIcon && btnLoader) {
+                            btnIcon.style.display = 'block';
+                            btnLoader.style.display = 'none';
+                            submitBtn.disabled = false;
+                            submitBtn.classList.remove('opacity-80', 'cursor-wait');
+                        }
+                        
+                        const emptyState = document.getElementById('emptyState');
+                        if(emptyState) emptyState.style.display = 'none';
+                        
+                        if(resultState) {
+                            resultState.style.display = 'block';
+                            setTimeout(() => {
+                                resultState.style.opacity = '1';
+                                resultState.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            }, 50);
+                        }
+                    } catch (renderError) {
+                        console.error("Rendering Execution Error:", renderError);
+                        window.showToast("Gangguan pada mesin render data. Periksa konsol.", true);
+                        if(submitBtn && btnIcon && btnLoader) {
+                            btnIcon.style.display = 'block';
+                            btnLoader.style.display = 'none';
+                            submitBtn.disabled = false;
+                            submitBtn.classList.remove('opacity-80', 'cursor-wait');
+                        }
+                    }
+                }, 1500);
+            } catch (formError) {
+                console.error("Form Submission Error:", formError);
+                window.showToast("Sistem mengalami kegagalan internal. Mohon muat ulang halaman.", true);
+            }
         };
 
         window.copyPrompt = function(elementId) {
-            const textToCopy = document.getElementById(elementId).textContent;
-            if (navigator.clipboard && window.isSecureContext) {
-                navigator.clipboard.writeText(textToCopy).then(() => {
-                    window.showToast("Prompt berhasil disalin. Sistem siap!", false);
-                }).catch(err => fallbackCopyTextToClipboard(textToCopy));
-            } else {
-                fallbackCopyTextToClipboard(textToCopy);
+            try {
+                const element = document.getElementById(elementId);
+                if(!element) return;
+                
+                const textToCopy = element.textContent;
+                
+                if (navigator.clipboard && window.isSecureContext) {
+                    navigator.clipboard.writeText(textToCopy).then(() => {
+                        window.showToast("Prompt berhasil disalin. Sistem siap!", false);
+                    }).catch(err => {
+                        fallbackCopyTextToClipboard(textToCopy);
+                    });
+                } else {
+                    fallbackCopyTextToClipboard(textToCopy);
+                }
+            } catch (err) {
+                console.error("Copy Execution Error:", err);
             }
         };
 
         function fallbackCopyTextToClipboard(text) {
-            const textArea = document.createElement("textarea");
-            textArea.value = text;
-            textArea.style.position = 'absolute';
-            textArea.style.left = '-9999px'; 
-            document.body.appendChild(textArea);
-            textArea.select();
-            
-            if(document.execCommand('copy')) {
-                window.showToast("Prompt disalin secara manual. Sistem siap!", false);
-            } else {
-                window.showToast("Browser Anda gagal menyalin otomatis.", true);
+            try {
+                const textArea = document.createElement("textarea");
+                textArea.value = text;
+                
+                textArea.setAttribute('readonly', ''); 
+                textArea.style.position = 'absolute';
+                textArea.style.left = '-9999px'; 
+                document.body.appendChild(textArea);
+                textArea.select();
+                
+                const successful = document.execCommand('copy');
+                if(successful) {
+                    window.showToast("Prompt disalin secara manual. Sistem siap!", false);
+                } else {
+                    window.showToast("Browser Anda gagal menyalin otomatis.", true);
+                }
+                document.body.removeChild(textArea);
+            } catch (err) {
+                window.showToast("Sistem perangkat Anda memblokir fungsi salin.", true);
             }
-            document.body.removeChild(textArea);
         }
     </script>
 </body>
